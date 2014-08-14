@@ -113,6 +113,9 @@ class TornadioWebSocketHandler(WebSocketHandler):
                 self.close()
             except:
                 pass
+    
+    def check_origin(self, origin):
+        return True
 
     def _detach(self):
         if self.session is not None:
